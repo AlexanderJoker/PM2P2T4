@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2P2T4.MainPage">
+
+    <StackLayout>
+
+        <Label Text="Ejercicio de Grabar Videos" TextColor="Black" HorizontalOptions="Center" FontSize="Title" />
+       
+        <Button x:Name="btnAgregar" Text="Agregar nuevo video" Clicked="btnAddVideo_Clicked"></Button>
+        <Button x:Name="btnver" Text="ver lista de videos" Clicked="btnViewVideos_Clicked"></Button>
+        <Button x:Name="btn" Text="Reproductor de videos" Clicked="btnPlay_Clicked"></Button>
+        <Label Text="Ejercicio desarrollado por Delbert Lira" HorizontalTextAlignment="Center" FontSize="Subtitle"/>
+    </StackLayout>
+
+</ContentPage>
