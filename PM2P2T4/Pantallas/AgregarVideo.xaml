@@ -3,11 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PM2P2T4.Pantallas.AgregarVideo">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            <Label Text="Agregar videos"/>
-        </StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="300" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="camara" BackgroundColor="DarkGray" HorizontalOptions="FillAndExpand" Grid.Row="0" Grid.ColumnSpan="3"/>
+            <Button x:Name="btnvideo" Text="Iniciar grabacion" HorizontalOptions="FillAndExpand" Grid.Row="1" Grid.Column="1" BackgroundColor="LightCyan" FontAttributes="Bold" Margin="2"></Button>
+            <Entry x:Name="txtnombre" Placeholder="nombre del lugar" Grid.Row="2" Grid.ColumnSpan="3" Keyboard="Plain" MaxLength="100" TextColor="Black"></Entry>
+            <Entry x:Name="txtdescripcion" Placeholder="Donde fue grabado" Grid.Row="3" Grid.ColumnSpan="3" Keyboard="Plain" MaxLength="255" TextColor="Black"></Entry>
+            <Button x:Name="btnguardar" Text="Guardar Grabacion" Clicked="btnSave_Clicked" HorizontalOptions="FillAndExpand" Grid.Row="4" Grid.Column="1" BackgroundColor="LightCyan" FontAttributes="Bold"></Button>
+
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
