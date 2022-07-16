@@ -23,6 +23,12 @@ namespace PM2P2T4.Pantallas
             InitializeComponent();
             btnvideo.Clicked += Btnvideo_Clicked;
         }
+        void eliminar()
+        {
+            txtnombre.Text = "";
+            txtdescripcion.Text = "";
+            camara.Source = null;
+        }
         private async void Btnvideo_Clicked(object sender, EventArgs e)
         {
             try
@@ -38,7 +44,7 @@ namespace PM2P2T4.Pantallas
                 var file = await CrossMedia.Current.TakeVideoAsync(new Plugin.Media.Abstractions.StoreVideoOptions
                 {
                     Name = "video.mp4",
-                    Directory = "DefaultVideos",
+                    Directory = "VideosGrabados",
                 });
 
                 if (file == null)
@@ -73,5 +79,7 @@ namespace PM2P2T4.Pantallas
                 await Navigation.PopAsync();
             }
         }
+       
     }
+    
 }

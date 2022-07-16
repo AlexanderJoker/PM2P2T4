@@ -1,16 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PM2P2T4.MainPage">
+             x:Class="PM2P2T4.MainPage"
+             BackgroundImageSource="https://3.bp.blogspot.com/-JFnd9YLsmAI/W-mIjQzkCyI/AAAAAAAAQKk/pJRJxVj_9Mk7pBclRd0VasiBjxDAWd2ygCLcBGAs/s1600/998524056821e6a7a0ab4f45ce695e15.jpg">
 
     <StackLayout>
 
-        <Label Text="Ejercicio de Grabar Videos" TextColor="Black" HorizontalOptions="Center" FontSize="Title" />
+        <Label Text="Ejercicio de Grabar Videos" TextColor="White" HorizontalOptions="Center" FontSize="32" />
        
-        <Button x:Name="btnAgregar" Text="Agregar nuevo video" Clicked="btnAddVideo_Clicked"></Button>
-        <Button x:Name="btnver" Text="ver lista de videos" Clicked="btnViewVideos_Clicked"></Button>
-        <Button x:Name="btn" Text="Reproductor de videos" Clicked="btnPlay_Clicked"></Button>
-        <Label Text="Ejercicio desarrollado por Delbert Lira" HorizontalTextAlignment="Center" FontSize="Subtitle"/>
+        <Button x:Name="btnAgregar" Text="Agregar nuevo video" Clicked="btnAddVideo_Clicked" TextColor="White" BackgroundColor="DarkBlue"></Button>
+        <Button x:Name="btnver" Text="ver lista de videos" Clicked="btnViewVideos_Clicked" TextColor="White"  BackgroundColor="DarkBlue"></Button>
+        
+        <Label Text="Ejercicio desarrollado por Delbert Lira" HorizontalTextAlignment="Center" FontSize="Subtitle" TextColor="White"/>
     </StackLayout>
 
 </ContentPage>

@@ -1,13 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PM2P2T4.Pantallas.ListaVideos">
+             BackgroundImageSource="https://3.bp.blogspot.com/-JFnd9YLsmAI/W-mIjQzkCyI/AAAAAAAAQKk/pJRJxVj_9Mk7pBclRd0VasiBjxDAWd2ygCLcBGAs/s1600/998524056821e6a7a0ab4f45ce695e15.jpg"
+             x:Class="PM2P2T4.Pantallas.ListaVideos" >
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            <Label Text="Lista videos"/>
+           
+                <Label Text="Videos Guardados" HorizontalTextAlignment="Center" TextColor="White" FontSize="Title"/>
+           
+            <Image Source="grabar" HeightRequest="70" WidthRequest="70"></Image>
+            <CollectionView ItemsSource="{Binding VideosGrabados}" x:Name="Listasvideos" SelectionMode="Single" SelectionChanged="ListaVideos_SelectionChanged">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <SwipeView BackgroundColor="DarkGreen">
+                            
+                            <SwipeView.RightItems>
+                                <SwipeItems>
+                                    <SwipeItem Text="VerVideo" BackgroundColor="DarkGray"  Invoked="SwipeItem_Invoked" />
+                                    
+                                </SwipeItems>
+                            </SwipeView.RightItems>
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.RowDefinitions >
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding nom}" Grid.Row="0" Grid.Column="0" TextColor="Black" Padding="10"></Label>
+                                    <Label Text="{Binding pathVideo}" Grid.Row="0" Grid.Column="2" TextColor="Black" HorizontalOptions="Center" IsVisible="false"></Label>
+                                    <Label Text="Video" HorizontalTextAlignment="Center" FontSize="Medium" TextColor="Black" FontAttributes="Bold" BackgroundColor="Beige" />
+                                </Grid>
+                            </StackLayout>
+                        </SwipeView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
